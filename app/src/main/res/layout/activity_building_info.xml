@@ -43,11 +43,21 @@
             android:text="@string/info_directions_button" />
     </LinearLayout>
 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent" />
+
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"></WebView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent" />
 
     <Button
         android:id="@+id/button_info_goto_main"
