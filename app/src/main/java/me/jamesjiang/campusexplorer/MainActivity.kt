@@ -13,7 +13,12 @@ class MainActivity : AppCompatActivity() {
 
 
         recylcerview_buildings.layoutManager = LinearLayoutManager(this)
-        recylcerview_buildings.adapter = BuildingsAdapter(Buildings.buildings)
+
+        var buildingsList = Buildings.buildings.toMutableList()
+        buildingsList.sortBy { it.name }
+        recylcerview_buildings.adapter = BuildingsAdapter(buildingsList)
+
+
     }
 
 }
