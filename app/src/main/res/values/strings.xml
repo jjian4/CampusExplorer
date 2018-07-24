@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CampusExplorer</string>
+
+    <string name="info_website_button">Website</string>
+    <string name="info_directions_button">Directions</string>
+    <string name="info_goto_main_button">Back</string>
+    <string name="info_map_uri_beginning">https://www.google.com/maps/dir/?api=1&amp;destination=university+of+michigan+</string>
+
 </resources>

@@ -2,25 +2,10 @@ package me.jamesjiang.campusexplorer
 
 import java.io.Serializable
 
-/*
-class Buildings {
-
-    companion object {
-        val buildings: Set<String> = setOf(
-                "East Hall",
-                "Chemistry Building",
-                "Modern Languages Building"
-        )
-    }
-
-}*/
-
-
-
-data class Buildings(val name: String,
-                     val area: Area,
-                     val site: String,
-                     val mapSite: String): Serializable {
+data class Building(val name: String,
+                    val area: Area,
+                    val mapQuery: String,
+                    val site: String): Serializable {
 
     enum class Area {
         Central,
@@ -29,10 +14,20 @@ data class Buildings(val name: String,
     }
 
     companion object {
-        val buildings: Set<Buildings> = setOf(
-                Buildings("East Hall", Area.Central, "example site", "example map"),
-                Buildings("Chemistry Building", Area.Central, "example site 2", "example map 2"),
-                Buildings("Modern Languages Building", Area.Central, "site 3", "map 3")
+
+        //Set of all buildings with their name, campus, and urls
+        val buildings: Set<Building> = setOf(
+                Building("Chemistry Building", Area.Central, "chemistry+building",
+                        "https://campusinfo.umich.edu/building-search/building/34/chemistry-dow-willard-h-laboratory"),
+
+                Building("East Hall - Mathematics", Area.Central, "department+of+mathematics",
+                        "https://campusinfo.umich.edu/building-search/department/928/department-of-mathematics"),
+
+                Building("East Hall - Psychology", Area.Central, "department+of+psychology",
+                        "https://campusinfo.umich.edu/building-search/department/1948/department-of-psychology"),
+
+                Building("Modern Languages Building", Area.Central, "modern+language+building",
+                        "https://campusinfo.umich.edu/building-search/building/111/modern-languages-building")
         )
     }
 }

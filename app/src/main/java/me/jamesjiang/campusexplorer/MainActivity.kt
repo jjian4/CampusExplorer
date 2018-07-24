@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity() {
 
         recylcerview_buildings.layoutManager = LinearLayoutManager(this)
 
-        var buildingsList = Buildings.buildings.toMutableList()
+        var buildingsList = Building.buildings.toMutableList()
         buildingsList.sortBy { it.name }
-        recylcerview_buildings.adapter = BuildingsAdapter(buildingsList)
+        recylcerview_buildings.adapter = BuildingsAdapter(this, buildingsList)
 
 
     }
