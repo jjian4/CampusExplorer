@@ -5,23 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="16dp"
     tools:context=".BuildingInfoActivity">
 
     <TextView
         android:id="@+id/textView_info_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="[Building name]"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView_info_area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="center" />
+        android:text="[Campus]"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,14 +40,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/info_website_button" />
+            android:text="@string/info_website_button"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button_info_directions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/info_directions_button" />
+            android:text="@string/info_directions_button"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <View
@@ -63,5 +74,7 @@
         android:id="@+id/button_info_goto_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/info_goto_main_button" />
+        android:text="@string/info_goto_main_button"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
 </LinearLayout>

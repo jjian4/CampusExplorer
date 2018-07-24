@@ -3,7 +3,6 @@ package me.jamesjiang.campusexplorer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 //Displays list of buildings, with filter and search options
@@ -33,7 +32,6 @@ class MainActivity : AppCompatActivity() {
                 radioButton_other.id -> recylcerview_buildings.adapter = BuildingsAdapter(this, otherList)
             }
         }
-
 
     }
 

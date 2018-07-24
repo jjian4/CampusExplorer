@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Hello World!"
-        android:textSize="30sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recylcerview_buildings"
         android:layout_width="0dp"
@@ -28,11 +17,11 @@
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_main" />
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="0.5dp"
+        android:layout_height="2dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@id/radioGroup" />
@@ -54,28 +43,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="All" />
+            android:text="All"
+            android:textColor="@android:color/black" />
 
         <RadioButton
             android:id="@+id/radioButton_central"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Central" />
+            android:text="Central"
+            android:textColor="@android:color/black" />
 
         <RadioButton
             android:id="@+id/radioButton_north"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="North" />
+            android:text="North"
+            android:textColor="@android:color/black" />
 
         <RadioButton
             android:id="@+id/radioButton_other"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Other" />
+            android:text="Other"
+            android:textColor="@android:color/black" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/main_textview"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
