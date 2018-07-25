@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Campus Explorer</string>
 
-    <string name="main_textview">Campus Buildings</string>
+    <!--Categories-->
+    <string name="academic_button">Academic</string>
+    <string name="administrative_button">Administrative</string>
+    <string name="housing_libraries_button">Housing + Libraries</string>
+    <string name="medical_button">Medical</string>
+    <string name="sports_student_life_button">Sports + Student Life</string>
+    <string name="favorites_button">Favorites</string>
+    <string name="all_button">All Buildings</string>
+
+
+    <string name="buildings_textview">Campus Buildings</string>
 
     <string name="info_website_button">Website</string>
     <string name="info_directions_button">Directions</string>

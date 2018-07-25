@@ -16,7 +16,7 @@ data class Building(val name: String,
     companion object {
 
         //Set of all buildings with their name, campus, and urls
-        val buildings: Set<Building> = setOf(
+        val academicBuildings: Set<Building> = setOf(
                 Building("Bob and Betty Beyster", Area.North, "bob+and+betty+beyster+building",
                         "https://campusinfo.umich.edu/building-search/building/525/bob-and-betty-beyster-building"),
 

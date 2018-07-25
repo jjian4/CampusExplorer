@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import kotlinx.android.synthetic.main.activity_building_info.*
 
 class BuildingInfoActivity : AppCompatActivity() {
@@ -37,10 +36,10 @@ class BuildingInfoActivity : AppCompatActivity() {
             startActivity(directionsIntent)
         }
 
-        //Brings user back to MainActivity
+        //Brings user back to BuildingsActivity
         button_info_goto_main.setOnClickListener {
-            val mainIntent = Intent(this, MainActivity::class.java)
-            startActivity(mainIntent)
+            val buildingsIntent = Intent(this, BuildingsActivity::class.java)
+            startActivity(buildingsIntent)
         }
 
     }

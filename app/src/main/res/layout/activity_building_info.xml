@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingBottom="8dp"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     android:paddingTop="16dp"
     tools:context=".BuildingInfoActivity">
 
@@ -37,7 +37,7 @@
 
         <Button
             android:id="@+id/button_info_website"
-            android:layout_width="wrap_content"
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/info_website_button"
@@ -46,7 +46,7 @@
 
         <Button
             android:id="@+id/button_info_directions"
-            android:layout_width="wrap_content"
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/info_directions_button"

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.buildings_row.view.*
 
 //Adapter for recyclerview of buildings
-class BuildingsAdapter(val mainActivity: MainActivity, val buildingsList: List<Building>)
+class BuildingsAdapter(val buildingsActivity: BuildingsActivity, val buildingsList: List<Building>)
     : RecyclerView.Adapter<CustomViewHolder>() {
 
     override fun getItemCount(): Int {
@@ -27,9 +27,9 @@ class BuildingsAdapter(val mainActivity: MainActivity, val buildingsList: List<B
 
         //Clicking on a building row changes activity
         holder.itemView.setOnClickListener {
-            val infoIntent = Intent(mainActivity, BuildingInfoActivity::class.java)
+            val infoIntent = Intent(buildingsActivity, BuildingInfoActivity::class.java)
             infoIntent.putExtra("Building", buildingsList.get(position))
-            mainActivity.startActivity(infoIntent)
+            buildingsActivity.startActivity(infoIntent)
         }
     }
 

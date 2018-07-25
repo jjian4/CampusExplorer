@@ -3,19 +3,34 @@ package me.jamesjiang.campusexplorer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import android.util.Log
+import kotlinx.android.synthetic.main.activity_buildings.*
 
 //Displays list of buildings, with filter and search options
-class MainActivity : AppCompatActivity() {
+//Default constructor must be defined for activity to be included in manifest (will not be used)
+class BuildingsActivity(): AppCompatActivity() {
+
+    var buildingsList: List<Building> = listOf(Building("Test", Building.Area.North, "texting", "testinggg"))
+
+    //Constructor that is used when choosing building category
+    constructor(passedBuildingsList: List<Building>): this() {
+        this.buildingsList = passedBuildingsList
+
+        Log.d("James", this.buildingsList.toString())
+        Log.d("James", buildingsList.toString())
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_buildings)
+
+        Log.d("James", buildingsList.toString())
 
         //Recyclerview of buildings, with default radio button at all
         recylcerview_buildings.layoutManager = LinearLayoutManager(this)
-        var buildingsList = Building.buildings.toMutableList()
-        buildingsList.sortBy { it.name }
+        /*var buildingsList = Building.academicBuildings.toMutableList()
+        buildingsList.sortBy { it.name }*/
         recylcerview_buildings.adapter = BuildingsAdapter(this, buildingsList)
 
 
