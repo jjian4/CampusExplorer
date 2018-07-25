@@ -22,7 +22,7 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@id/radioGroup" />
 
@@ -30,7 +30,7 @@
         android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginStart="16dp"
         android:checkedButton="@+id/radioButton_all"
         android:orientation="horizontal"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="All"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/colorPrimary" />
 
         <RadioButton
             android:id="@+id/radioButton_central"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Central"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/colorPrimary" />
 
         <RadioButton
             android:id="@+id/radioButton_north"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="North"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/colorPrimary" />
 
         <RadioButton
             android:id="@+id/radioButton_other"
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Other"
-            android:textColor="@android:color/black" />
+            android:textColor="@color/colorPrimary" />
     </RadioGroup>
 
     <TextView

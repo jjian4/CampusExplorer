@@ -12,11 +12,18 @@ class CategoriesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_categories)
 
 
-
         button_academic.setOnClickListener {
             sendToBuildingsActivity(BuildingSet.academicBuildings)
         }
+
+        button_administrative.setOnClickListener {
+            //COMPLETE
+        }
+
+        //DO REST OF BUTTONS
     }
+
+
 
     fun sendToBuildingsActivity(buildingsSet: BuildingSet) {
         val buildingsIntent = Intent(this, BuildingsActivity::class.java)

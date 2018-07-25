@@ -36,11 +36,5 @@ class BuildingInfoActivity : AppCompatActivity() {
             startActivity(directionsIntent)
         }
 
-        //Brings user back to BuildingsActivity
-        button_info_goto_main.setOnClickListener {
-            val buildingsIntent = Intent(this, BuildingsActivity::class.java)
-            startActivity(buildingsIntent)
-        }
-
     }
 }
