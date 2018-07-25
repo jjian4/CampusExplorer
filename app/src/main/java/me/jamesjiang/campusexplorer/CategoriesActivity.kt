@@ -14,16 +14,14 @@ class CategoriesActivity : AppCompatActivity() {
 
 
         button_academic.setOnClickListener {
-            var buildingsList = Building.academicBuildings.toMutableList()
-            buildingsList.sortBy { it.name }
-
-            sendToBuildingsActivity(buildingsList)
+            sendToBuildingsActivity(BuildingSet.academicBuildings)
         }
     }
 
-    fun sendToBuildingsActivity(buildingsList: List<Building>) {
-        val buildingsActivity = BuildingsActivity(buildingsList)
-        val buildingsIntent = Intent(this, buildingsActivity::class.java)
+    fun sendToBuildingsActivity(buildingsSet: BuildingSet) {
+        val buildingsIntent = Intent(this, BuildingsActivity::class.java)
+        buildingsIntent.putExtra("Category", getText(R.string.academic_button).toString())
+        buildingsIntent.putExtra("Building set", buildingsSet)
         startActivity(buildingsIntent)
     }
 }

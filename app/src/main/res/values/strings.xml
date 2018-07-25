@@ -11,8 +11,6 @@
     <string name="all_button">All Buildings</string>
 
 
-    <string name="buildings_textview">Campus Buildings</string>
-
     <string name="info_website_button">Website</string>
     <string name="info_directions_button">Directions</string>
     <string name="info_goto_main_button">Back</string>

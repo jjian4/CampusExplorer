@@ -10,27 +10,23 @@ import kotlinx.android.synthetic.main.activity_buildings.*
 //Default constructor must be defined for activity to be included in manifest (will not be used)
 class BuildingsActivity(): AppCompatActivity() {
 
-    var buildingsList: List<Building> = listOf(Building("Test", Building.Area.North, "texting", "testinggg"))
-
-    //Constructor that is used when choosing building category
-    constructor(passedBuildingsList: List<Building>): this() {
-        this.buildingsList = passedBuildingsList
-
-        Log.d("James", this.buildingsList.toString())
-        Log.d("James", buildingsList.toString())
-    }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buildings)
 
-        Log.d("James", buildingsList.toString())
+        //Get passed-in category title
+        val category = intent.getStringExtra("Category") as String
+        textView_category.text = category
+        //Get passed-in serialiable set of buildings from CategoriesActivity
+        var buildingSet = intent.getSerializableExtra("Building set") as BuildingSet
 
-        //Recyclerview of buildings, with default radio button at all
+        //Convert to a list
+        val buildingsList = buildingSet.set.toMutableList()
+        buildingsList.sortBy { it.name }
+
+        //Recyclerview of buildings, with radio button defaulted at all
         recylcerview_buildings.layoutManager = LinearLayoutManager(this)
-        /*var buildingsList = Building.academicBuildings.toMutableList()
-        buildingsList.sortBy { it.name }*/
         recylcerview_buildings.adapter = BuildingsAdapter(this, buildingsList)
 
 
