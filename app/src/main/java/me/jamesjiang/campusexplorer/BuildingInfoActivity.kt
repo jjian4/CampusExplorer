@@ -1,10 +1,12 @@
 package me.jamesjiang.campusexplorer
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_building_info.*
 
 class BuildingInfoActivity : AppCompatActivity() {
@@ -13,14 +15,45 @@ class BuildingInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_building_info)
 
+        //Retrieve the passed-in building
         val building = intent.getSerializableExtra("Building") as Building
 
-        //Set texts and webview
+        //Set texts
         textView_info_name.text = building.name
         textView_info_area.text = building.area.toString()
         //Replace any underscores with spaces
         textView_info_category.text = building.category.toString().replace("_", " ")
 
+
+        //Get favorites list (for checking if this building is a favorite)
+        val favoritesSharedPreferences = FavoritesSharedPreferences(this)
+        var favoriteBuildingNames = favoritesSharedPreferences.getFavoritesSet()
+        //Set favorites star
+        if (favoriteBuildingNames.any{it == building.name}) {
+            imageButton_star.setImageResource(R.drawable.ic_filled_star)
+        } else {
+            imageButton_star.setImageResource(R.drawable.ic_empty_star)
+        }
+
+        //Changes icon and shared pref when clicked
+        imageButton_star.setOnClickListener {
+            //If building was in favorites, remove it from favorites
+            if (favoriteBuildingNames.any{it == building.name}) {
+                imageButton_star.setImageResource(R.drawable.ic_empty_star)
+                favoriteBuildingNames.remove(building.name)
+                favoritesSharedPreferences.setFavoritesSet(favoriteBuildingNames)
+                Toast.makeText(this, "Removed from favorites :(", Toast.LENGTH_SHORT).show()
+            }
+            //If building was not in favorites, add it to favorites
+            else {
+                imageButton_star.setImageResource(R.drawable.ic_filled_star)
+                favoriteBuildingNames.add(building.name)
+                favoritesSharedPreferences.setFavoritesSet(favoriteBuildingNames)
+                Toast.makeText(this, "Added to favorites!!", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        //Sets webview
         webview.loadUrl(building.site)
 
         //Brings user to website on google chrome

@@ -11,15 +11,34 @@
     android:paddingTop="16dp"
     tools:context=".BuildingInfoActivity">
 
-    <TextView
-        android:id="@+id/textView_info_name"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="[Building name]"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView_info_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="[Building name]"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton_star"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_info_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_empty_star" />
+    </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

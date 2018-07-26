@@ -18,6 +18,7 @@ class BuildingsActivity(): AppCompatActivity() {
         //Get passed-in category title
         val category = intent.getStringExtra("Category") as String
         textView_category.text = category
+
         //Get passed-in serialiable set of buildings from CategoriesActivity
         var buildingSet = intent.getSerializableExtra("Building set") as BuildingSet
 
