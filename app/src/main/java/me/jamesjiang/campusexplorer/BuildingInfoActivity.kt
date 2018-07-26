@@ -15,9 +15,13 @@ class BuildingInfoActivity : AppCompatActivity() {
 
         val building = intent.getSerializableExtra("Building") as Building
 
-
+        //Set texts and webview
         textView_info_name.text = building.name
+
         textView_info_area.text = building.area.toString()
+
+        textView_info_category.text = building.category.toString()
+
         webview.loadUrl(building.site)
 
         //Brings user to website on google chrome
