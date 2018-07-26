@@ -13,14 +13,35 @@ class CategoriesActivity : AppCompatActivity() {
 
 
         button_academic.setOnClickListener {
-            sendToBuildingsActivity(BuildingSet.academicBuildings)
+            sendToBuildingsActivity(academicBuildings)
         }
 
         button_administrative.setOnClickListener {
-            //COMPLETE
+            sendToBuildingsActivity(administrativeBuildings)
         }
 
-        //DO REST OF BUTTONS
+        //COMPLETE BELOW
+        button_housing_libraries.setOnClickListener {
+            val combinedSet = BuildingSet(librariesBuildings.set.union(housingBuildings.set))
+            sendToBuildingsActivity(combinedSet)
+        }
+
+        button_medical.setOnClickListener {
+
+        }
+
+        button_sports_student_life.setOnClickListener {
+
+        }
+
+        button_favorites.setOnClickListener {
+
+        }
+
+        button_all.setOnClickListener {
+
+        }
+
     }
 
 
