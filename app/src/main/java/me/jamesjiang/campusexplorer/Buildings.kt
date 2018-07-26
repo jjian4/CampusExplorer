@@ -4,6 +4,7 @@ import java.io.Serializable
 
 //Data class for an individual building
 data class Building(val name: String,
+                    val category: Category,
                     val area: Area,
                     val site: String): Serializable {
 
@@ -11,6 +12,17 @@ data class Building(val name: String,
         Central,
         North,
         Other
+    }
+
+    enum class Category {
+        Academic,
+        Administrative,
+        Athletic,
+        Housing,
+        Library,
+        Museum,
+        Medical,
+        StudentLife
     }
 
 }
