@@ -2,6 +2,10 @@ package me.jamesjiang.campusexplorer
 
 import java.io.Serializable
 
+//Data Class for holding the different sets of buildings, serializable to pass between activities
+//Buildings found at https://maps.studentlife.umich.edu/building
+data class BuildingSet(val set: Set<Building>): Serializable
+
 //Data class for an individual building
 data class Building(val name: String,
                     val category: Category,
@@ -22,8 +26,9 @@ data class Building(val name: String,
         Library,
         Museum,
         Medical,
-        StudentLife
+        Student_Life
     }
 
 }
+
 

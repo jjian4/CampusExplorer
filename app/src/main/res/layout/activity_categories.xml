@@ -37,7 +37,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button_sports_student_life"
+            android:id="@+id/button_athletic_student_life"
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_marginEnd="8dp"
@@ -81,7 +81,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_housing_libraries" />
+            app:layout_constraintTop_toBottomOf="@+id/button_housing_libraries_museums" />
 
         <Button
             android:id="@+id/button_favorites"
@@ -95,10 +95,10 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_sports_student_life" />
+            app:layout_constraintTop_toBottomOf="@+id/button_athletic_student_life" />
 
         <Button
-            android:id="@+id/button_housing_libraries"
+            android:id="@+id/button_housing_libraries_museums"
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_marginEnd="8dp"

@@ -1,10 +1,5 @@
 package me.jamesjiang.campusexplorer
 
-import java.io.Serializable
-
-//Class for holding the different sets of buildings, serializable to pass between activities
-data class BuildingSet(val set: Set<Building>): Serializable
-
 
 val academicBuildings = BuildingSet(
         setOf(
@@ -62,3 +57,31 @@ val medicalBuildings = BuildingSet(
         )
 )
 
+val athleticBuildings = BuildingSet(
+        setOf(
+                Building("Bahna Wrestling Center", Building.Category.Athletic, Building.Area.Other,
+                        "https://campusinfo.umich.edu/building-search/building/575/bahna-wrestling-center"),
+
+                Building("Cliff Keen Arena", Building.Category.Athletic, Building.Area.Other,
+                        "https://campusinfo.umich.edu/building-search/building/37/keen-clifford-p-arena"),
+
+                Building("Crisler Center", Building.Category.Athletic, Building.Area.Other,
+                        "https://campusinfo.umich.edu/building-search/building/35/crisler-center")
+        )
+)
+
+val studentLifeBuildings = BuildingSet(
+        setOf(
+                Building("Alumni Center", Building.Category.Student_Life, Building.Area.Central,
+                        "https://campusinfo.umich.edu/building-search/building/10/alumni-center"),
+
+                Building("Argus Building I", Building.Category.Student_Life, Building.Area.Other,
+                        "https://campusinfo.umich.edu/building-search/building/14/argus-building-i"),
+
+                Building("Burnham House", Building.Category.Student_Life, Building.Area.Central,
+                        "https://campusinfo.umich.edu/building-search/building/13/burnham-house"),
+
+                Building("Campus Farm", Building.Category.Student_Life, Building.Area.Other,
+                        "http://sustainability.umich.edu/umsfp/about/campus-farm")
+        )
+)

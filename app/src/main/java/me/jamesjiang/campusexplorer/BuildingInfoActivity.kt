@@ -17,10 +17,9 @@ class BuildingInfoActivity : AppCompatActivity() {
 
         //Set texts and webview
         textView_info_name.text = building.name
-
         textView_info_area.text = building.area.toString()
-
-        textView_info_category.text = building.category.toString()
+        //Replace any underscores with spaces
+        textView_info_category.text = building.category.toString().replace("_", " ")
 
         webview.loadUrl(building.site)
 
