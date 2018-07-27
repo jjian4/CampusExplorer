@@ -1,8 +1,6 @@
 package me.jamesjiang.campusexplorer
 
 import android.content.Intent
-import android.graphics.Paint
-import android.graphics.Typeface
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +39,7 @@ class BuildingsAdapter(val buildingsActivity: BuildingsActivity, val buildingsLi
         //Clicking on a building row changes activity
         holder.itemView.setOnClickListener {
             val infoIntent = Intent(buildingsActivity, BuildingInfoActivity::class.java)
+            infoIntent.putExtra("Button ID", buildingsActivity.buttonID)
             infoIntent.putExtra("Building", buildingsList.get(position))
             buildingsActivity.startActivity(infoIntent)
         }

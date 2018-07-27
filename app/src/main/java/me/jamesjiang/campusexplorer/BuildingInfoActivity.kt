@@ -1,11 +1,9 @@
 package me.jamesjiang.campusexplorer
 
 import android.content.Intent
-import android.graphics.Color
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_building_info.*
 
@@ -20,6 +18,13 @@ class BuildingInfoActivity : AppCompatActivity() {
 
         //Set texts
         textView_info_name.text = building.name
+        //If building name is large, decrease the font
+        if (building.name.count() > 20) {
+            textView_info_name.textSize = 24.toFloat()
+        }
+        else if (building.name.count() > 15) {
+            textView_info_name.textSize = 27.toFloat()
+        }
         textView_info_area.text = building.area.toString()
         //Replace any underscores with spaces
         textView_info_category.text = building.category.toString().replace("_", " ")
@@ -73,6 +78,14 @@ class BuildingInfoActivity : AppCompatActivity() {
 
             val directionsIntent = Intent(Intent.ACTION_VIEW, uri)
             startActivity(directionsIntent)
+        }
+
+        //Back to list, Use CategoriesActivity to regenerate list with any updates
+        button_backto_list.setOnClickListener {
+            val buttonID = intent.getIntExtra("Button ID", 3)
+            val backToListIntent = Intent(this, CategoriesActivity::class.java)
+            backToListIntent.putExtra("Button ID", buttonID)
+            startActivity(backToListIntent)
         }
 
     }

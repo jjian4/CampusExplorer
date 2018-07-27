@@ -3,6 +3,7 @@ package me.jamesjiang.campusexplorer
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_categories.*
 
@@ -12,7 +13,6 @@ class CategoriesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories)
-
 
         button_academic.setOnClickListener {
             sendToBuildingsActivity(button_academic, academicBuildings)
@@ -75,12 +75,20 @@ class CategoriesActivity : AppCompatActivity() {
             sendToBuildingsActivity(button_all, combinedSet)
         }
 
+        //Used by BuildingInfoActivity to regenerate list with any updates
+        if (intent.hasExtra("Button ID")) {
+            val buttonID = intent.getIntExtra("Button ID", 0)
+            val button = findViewById<Button>(buttonID)
+            button.callOnClick()
+        }
+
     }
 
 
     //Pass a specific set of buildings to BuildingsActivity to list them out
     fun sendToBuildingsActivity(button: Button, buildingsSet: BuildingSet) {
         val buildingsIntent = Intent(this, BuildingsActivity::class.java)
+        buildingsIntent.putExtra("Button ID", button.id)
         buildingsIntent.putExtra("Category", button.text)
         buildingsIntent.putExtra("Building set", buildingsSet)
         startActivity(buildingsIntent)

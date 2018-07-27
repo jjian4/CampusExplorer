@@ -11,10 +11,14 @@
     <string name="all_button">All Buildings</string>
 
 
+    <string name="list_backto_categories_button">Category</string>
+
+
     <string name="info_category_textview">Category</string>
     <string name="info_area_textview">Area</string>
     <string name="info_website_button">Website</string>
     <string name="info_directions_button">Directions</string>
+    <string name="info_backto_list_button">Back to List</string>
 
     <string name="info_map_uri_beginning">
         https://www.google.com/maps/dir/?api=1&amp;destination=
