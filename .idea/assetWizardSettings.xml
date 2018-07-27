@@ -40,13 +40,26 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="paddingPercent" value="-10" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                     </map>
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_filled_star" />
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/backButton.png" />
+                                      <entry key="outputName" value="ic_back_button" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="ffcb05" />
+                                      <entry key="themeColor" value="00274c" />
                                     </map>
                                   </option>
                                 </PersistentState>

@@ -58,8 +58,13 @@ class BuildingInfoActivity : AppCompatActivity() {
             }
         }
 
-        //Sets webview
+        //Sets webview, enable javascript to remove overlapped html and zooming issues
+        val webSettings = webview!!.settings
+        webSettings.javaScriptEnabled = true
+        webSettings.builtInZoomControls = true
         webview.loadUrl(building.site)
+
+
 
         //Brings user to website on google chrome
         button_info_website.setOnClickListener {

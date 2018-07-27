@@ -27,7 +27,7 @@ class BuildingsActivity(): AppCompatActivity() {
         textView_category.text = category
         //If category title is large, decrease the font
         if (category.count() > 15) {
-            textView_category.textSize = 24.toFloat()
+            textView_category.textSize = 27.toFloat()
         }
 
 

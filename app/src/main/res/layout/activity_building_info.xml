@@ -43,10 +43,9 @@
     </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
+        android:id="@+id/linear_category_area_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -109,7 +108,6 @@
                 android:id="@+id/textView_info_area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
                 android:text="[Area]"
                 android:textAlignment="center"
@@ -120,15 +118,40 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2.5dp"
+        android:background="@color/colorAccent" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2.5dp"
+        android:background="@color/colorAccent" />
+
     <LinearLayout
+        android:id="@+id/linear_website_direction_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <ImageButton
+            android:id="@+id/button_backto_list"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="0.03"
+            android:backgroundTint="@color/colorAccent"
+            app:srcCompat="@drawable/ic_back_button" />
+
         <Button
             android:id="@+id/button_info_website"
             android:layout_width="12dp"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
             android:text="@string/info_website_button"
@@ -139,7 +162,7 @@
         <Button
             android:id="@+id/button_info_directions"
             android:layout_width="12dp"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
             android:text="@string/info_directions_button"
@@ -148,30 +171,5 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2.5dp"
-        android:background="@color/colorAccent" />
-
-    <WebView
-        android:id="@+id/webview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2.5dp"
-        android:background="@color/colorAccent" />
-
-    <Button
-        android:id="@+id/button_backto_list"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/info_backto_list_button"
-        android:textColor="@color/colorPrimary"
-        android:textSize="21sp"
-        android:textStyle="bold" />
 
 </LinearLayout>
