@@ -65,7 +65,6 @@ class BuildingInfoActivity : AppCompatActivity() {
         webview.loadUrl(building.site)
 
 
-
         //Brings user to website on google chrome
         button_info_website.setOnClickListener {
             val uri = Uri.parse(building.site)

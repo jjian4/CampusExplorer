@@ -11,9 +11,6 @@
     <string name="all_button">All Buildings</string>
 
 
-    <string name="list_backto_categories_button">Category</string>
-
-
     <string name="info_category_textview">Category</string>
     <string name="info_area_textview">Area</string>
     <string name="info_website_button">Website</string>
