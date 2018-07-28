@@ -16,11 +16,14 @@
     <string name="info_website_button">Website</string>
     <string name="info_directions_button">Directions</string>
 
+    <string name="info_webview_uri_beginning">https://campusinfo.umich.edu/building-search/building/</string>
     <string name="info_map_uri_beginning">
         https://www.google.com/maps/dir/?api=1&amp;destination=
     </string>
     <string name="info_map_uri_end">
         %2C+Ann+Arbor%2C+MI
     </string>
+    <string name="webview_back_button"><![CDATA[<]]></string>
+    <string name="webview_forward_button"><![CDATA[>]]></string>
 
 </resources>

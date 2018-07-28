@@ -3,85 +3,67 @@ package me.jamesjiang.campusexplorer
 
 val academicBuildings = BuildingSet(
         setOf(
-                Building("Bob and Betty Beyster (BBB)", Building.Category.Academic, Building.Area.North,
-                        "https://campusinfo.umich.edu/building-search/building/525/bob-and-betty-beyster-building"),
+                Building("Bob and Betty Beyster (BBB)", Category.Academic, Area.North, 525),
 
-                Building("Chemistry Dow Lab", Building.Category.Academic, Building.Area.Central,
-                        "https://campusinfo.umich.edu/building-search/building/34/chemistry-dow-willard-h-laboratory"),
+                Building("Chemistry Dow Lab", Category.Academic, Area.Central, 34),
 
-                Building("East Hall", Building.Category.Academic, Building.Area.Central,
-                        "https://campusinfo.umich.edu/building-search/building/53/east-hall"),
+                Building("East Hall", Category.Academic, Area.Central, 53),
 
-                Building("Modern Languages Building", Building.Category.Academic, Building.Area.Central,
-                        "https://campusinfo.umich.edu/building-search/building/111/modern-languages-building")
+                Building("Modern Languages Building", Category.Academic, Area.Central, 111)
         )
 )
 
 val administrativeBuildings = BuildingSet(
         setOf(
-                Building("1027 East Huron Building", Building.Category.Administrative, Building.Area.Central,
-                        "https://campusinfo.umich.edu/building-search/building/537/1027-east-huron-building"),
+                Building("1027 East Huron Building", Category.Administrative, Area.Central, 537),
 
-                Building("Madison Building", Building.Category.Administrative, Building.Area.Central,
-                        "https://campusinfo.umich.edu/building-search/building/173/madison-building")
+                Building("Madison Building", Category.Administrative, Area.Central, 173)
         )
 )
 
 val housingBuildings = BuildingSet(
         setOf(
-                Building("Alice Llyod Hall", Building.Category.Housing, Building.Area.Central,
-                        "http://www.housing.umich.edu/undergrad/alice-lloyd-hall"),
+                Building("Alice Llyod Hall", Category.Housing, Area.Central, 9),
 
-                Building("Betsy Barbour House", Building.Category.Housing, Building.Area.Central,
-                        "http://www.housing.umich.edu/undergrad/betsy-barbour-house")
-
+                Building("Betsy Barbour House", Category.Housing, Area.Central, 20)
 
         )
 )
 
 val librariesMuseumsBuildings = BuildingSet(
         setOf(
-                Building("Bentley Historical Library", Building.Category.Library, Building.Area.North,
-                        "https://campusinfo.umich.edu/building-search/building/19/bentley-alvin-m-arvella-d-historical-library")
+                Building("Bentley Historical Library", Category.Library, Area.North, 19)
 
         )
 )
 
 val medicalBuildings = BuildingSet(
         setOf(
-                Building("300 N Ingalls Building", Building.Category.Medical, Building.Area.Other,
-                        "https://campusinfo.umich.edu/building-search/building/570/300-n-ingalls-building"),
+                Building("300 N Ingalls Building", Category.Medical, Area.Other, 570),
 
-                Building("Bradford House", Building.Category.Medical, Building.Area.Other,
-                        "https://campusinfo.umich.edu/building-search/building/592/bradford-house")
+                Building("Bradford House", Category.Medical, Area.Other, 592)
         )
 )
 
 val athleticBuildings = BuildingSet(
         setOf(
-                Building("Bahna Wrestling Center", Building.Category.Athletic, Building.Area.Other,
-                        "https://campusinfo.umich.edu/building-search/building/575/bahna-wrestling-center"),
+                Building("Bahna Wrestling Center", Category.Athletic, Area.Other, 575),
 
-                Building("Cliff Keen Arena", Building.Category.Athletic, Building.Area.Other,
-                        "https://campusinfo.umich.edu/building-search/building/37/keen-clifford-p-arena"),
+                Building("Cliff Keen Arena", Category.Athletic, Area.Other, 37),
 
-                Building("Crisler Center", Building.Category.Athletic, Building.Area.Other,
-                        "https://campusinfo.umich.edu/building-search/building/35/crisler-center")
+                Building("Crisler Center", Category.Athletic, Area.Other, 35)
         )
 )
 
 val studentLifeBuildings = BuildingSet(
         setOf(
-                Building("Alumni Center", Building.Category.Student_Life, Building.Area.Central,
-                        "https://campusinfo.umich.edu/building-search/building/10/alumni-center"),
+                Building("Alumni Center", Category.Student_Life, Area.Central, 10),
 
-                Building("Argus Building I", Building.Category.Student_Life, Building.Area.Other,
-                        "https://campusinfo.umich.edu/building-search/building/14/argus-building-i"),
+                Building("Argus Building I", Category.Student_Life, Area.Other, 14),
 
-                Building("Burnham House", Building.Category.Student_Life, Building.Area.Central,
-                        "https://campusinfo.umich.edu/building-search/building/13/burnham-house"),
+                Building("Burnham House", Category.Student_Life, Area.Central, 13),
 
-                Building("Campus Farm", Building.Category.Student_Life, Building.Area.Other,
+                Building("Campus Farm", Category.Student_Life, Area.Other,
                         "http://sustainability.umich.edu/umsfp/about/campus-farm")
         )
 )

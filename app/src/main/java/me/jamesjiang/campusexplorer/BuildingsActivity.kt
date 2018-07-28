@@ -49,9 +49,9 @@ class BuildingsActivity(): AppCompatActivity() {
 
 
         //List changes depending on which campus (radio button) is selected
-        val centralList = buildingsList.filter { building -> building.area == Building.Area.Central }
-        val northList = buildingsList.filter { building -> building.area == Building.Area.North }
-        val otherList = buildingsList.filter { building -> building.area == Building.Area.Other }
+        val centralList = buildingsList.filter { building -> building.area == Area.Central }
+        val northList = buildingsList.filter { building -> building.area == Area.North }
+        val otherList = buildingsList.filter { building -> building.area == Area.Other }
 
         radioGroup.setOnCheckedChangeListener{_, isChecked ->
             when(isChecked) {

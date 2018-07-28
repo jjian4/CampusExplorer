@@ -31,7 +31,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:checkedButton="@+id/radioButton_all"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"

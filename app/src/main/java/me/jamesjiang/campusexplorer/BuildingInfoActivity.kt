@@ -4,6 +4,10 @@ import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_building_info.*
 
@@ -58,11 +62,31 @@ class BuildingInfoActivity : AppCompatActivity() {
             }
         }
 
-        //Sets webview, enable javascript to remove overlapped html and zooming issues
+        //Used to make sure all url opens in webview and not chrome even when it redirects
+        class MyWebviewClient: WebViewClient() {
+            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+                view?.loadUrl(request?.url.toString())
+                return true
+            }
+        }
+
+        //Sets webview, enable javascript to remove overlapped html
+        webview.webViewClient = MyWebviewClient()
         val webSettings = webview!!.settings
         webSettings.javaScriptEnabled = true
-        webSettings.builtInZoomControls = true
         webview.loadUrl(building.site)
+
+        //Back and forward buttons on webview
+        button_webview_back.setOnClickListener {
+            if(webview.canGoBack()) {
+                webview.goBack()
+            }
+        }
+        button_webview_forward.setOnClickListener {
+            if(webview.canGoForward()) {
+                webview.goForward()
+            }
+        }
 
 
         //Brings user to website on google chrome
@@ -101,4 +125,5 @@ class BuildingInfoActivity : AppCompatActivity() {
 
         return newName
     }
+
 }

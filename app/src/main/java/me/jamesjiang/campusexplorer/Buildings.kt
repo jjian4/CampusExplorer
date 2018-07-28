@@ -10,25 +10,32 @@ data class BuildingSet(val set: Set<Building>): Serializable
 data class Building(val name: String,
                     val category: Category,
                     val area: Area,
-                    val site: String): Serializable {
+                    var site: String): Serializable {
 
-    enum class Area {
-        Central,
-        North,
-        Other
-    }
-
-    enum class Category {
-        Academic,
-        Administrative,
-        Athletic,
-        Housing,
-        Library,
-        Museum,
-        Medical,
-        Student_Life
+    //Constructor depends on whether campusinfo.umich.edu/building-search/ or another site is used
+    constructor(name: String,
+                category: Category,
+                area: Area,
+                siteNum: Int): this(name, category, area, "") {
+        //Can't access resources because not in a context or activity, so hardcoded
+        this.site = "https://campusinfo.umich.edu/building-search/building/" + siteNum.toString()
     }
 
 }
 
+enum class Area {
+    Central,
+    North,
+    Other
+}
 
+enum class Category {
+    Academic,
+    Administrative,
+    Athletic,
+    Housing,
+    Library,
+    Museum,
+    Medical,
+    Student_Life
+}
