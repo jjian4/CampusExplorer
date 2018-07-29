@@ -6,6 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".BuildingsActivity">
 
+    <TextView
+        android:id="@+id/textView_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="[Category]"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton_toggle_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_category"
+        app:srcCompat="@drawable/ic_search_action_blue" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recylcerview_buildings"
         android:layout_width="0dp"
@@ -22,9 +48,20 @@
         android:id="@+id/view"
         android:layout_width="fill_parent"
         android:layout_height="2dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@id/radioGroup" />
+        app:layout_constraintBottom_toTopOf="@+id/button_backto_categories" />
+
+    <ImageButton
+        android:id="@+id/button_backto_categories"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_back_button" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -43,7 +80,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="All"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/list_radio_all"
             android:textColor="@color/colorPrimary" />
 
         <RadioButton
@@ -51,7 +89,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Central"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/list_radio_central"
             android:textColor="@color/colorPrimary" />
 
         <RadioButton
@@ -59,7 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="North"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/list_radio_north"
             android:textColor="@color/colorPrimary" />
 
         <RadioButton
@@ -67,33 +107,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Other"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/list_radio_other"
             android:textColor="@color/colorPrimary" />
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/textView_category"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText_search"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="[Category]"
-        android:textAllCaps="false"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/button_backto_categories"
-        android:layout_width="55dp"
-        android:layout_height="40dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:backgroundTint="@color/colorAccent"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:hint="@string/list_search_hint"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_back_button" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_backto_categories" />
 
 </android.support.constraint.ConstraintLayout>

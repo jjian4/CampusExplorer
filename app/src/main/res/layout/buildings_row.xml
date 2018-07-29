@@ -7,9 +7,10 @@
 
     <TextView
         android:id="@+id/textView_building_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginTop="12dp"
         android:paddingBottom="5dp"
         android:paddingTop="5dp"
@@ -17,6 +18,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraint_right"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -10,6 +10,11 @@
     <string name="favorites_button">Favorites</string>
     <string name="all_button">All Buildings</string>
 
+    <string name="list_search_hint">Search</string>
+    <string name="list_radio_all">All</string>
+    <string name="list_radio_central">Central</string>
+    <string name="list_radio_north">North</string>
+    <string name="list_radio_other">Other</string>
 
     <string name="info_category_textview">Category</string>
     <string name="info_area_textview">Area</string>

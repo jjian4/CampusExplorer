@@ -1,9 +1,13 @@
 package me.jamesjiang.campusexplorer
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_buildings.*
 
 //Displays list of buildings, with filter and search options
@@ -27,7 +31,6 @@ class BuildingsActivity(): AppCompatActivity() {
             textView_category.textSize = 27.toFloat()
         }
 
-
         //Go back to categories if clicked
         button_backto_categories.setOnClickListener {
             val backtoCategoriesIntent = Intent(this, CategoriesActivity::class.java)
@@ -36,11 +39,10 @@ class BuildingsActivity(): AppCompatActivity() {
 
 
         //Get passed-in serializable set of buildings from CategoriesActivity
-        var buildingSet = intent.getSerializableExtra("Building set") as BuildingSet
+        val buildingSet = intent.getSerializableExtra("Building set") as BuildingSet
 
         //Convert to a list
-        val buildingsList = buildingSet.set.toMutableList()
-        buildingsList.sortBy { it.name }
+        val buildingsList = buildingSet.set.toMutableList().sortedBy { it.name }
 
         //Recyclerview of buildings, with radio button defaulted at all
         recylcerview_buildings.layoutManager = LinearLayoutManager(this)
@@ -61,7 +63,50 @@ class BuildingsActivity(): AppCompatActivity() {
             }
         }
 
-    }
 
+        //Toggle search vs. radio buttons
+        imageButton_toggle_search.setOnClickListener {
+            if (editText_search.visibility == View.VISIBLE) {
+                imageButton_toggle_search.setImageResource(R.drawable.ic_search_action_blue)
+                //Hide keyboard
+                val imm = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(view.windowToken, 0)
+
+                editText_search.visibility = View.GONE
+                radioGroup.visibility = View.VISIBLE
+                //Show original list
+                recylcerview_buildings.adapter = BuildingsAdapter(this, buildingsList)
+                radioButton_all.isChecked = true
+            }
+            else {
+                imageButton_toggle_search.setImageResource(R.drawable.ic_search_action_maize)
+                radioGroup.visibility = View.GONE
+                editText_search.visibility = View.VISIBLE
+                //Show keyboard
+                editText_search.requestFocus()
+                val imm = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.toggleSoftInputFromWindow(view.windowToken, 0, 0)
+            }
+        }
+
+
+        //Search and filter the recyclerview when Enter is clicked
+        editText_search.setOnKeyListener(View.OnKeyListener {v, keyCode, event ->
+            if(keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+                //Hide keyboard
+                val imm = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(view.windowToken, 0)
+
+                //Filter recyclerview
+                var filteredList = buildingsList.filter {
+                    building -> building.name.toLowerCase().contains(editText_search.text) ||
+                        building.name.toUpperCase().contains(editText_search.text) }
+                recylcerview_buildings.adapter = BuildingsAdapter(this, filteredList)
+                return@OnKeyListener true
+            }
+            false
+        })
+
+    }
 
 }
