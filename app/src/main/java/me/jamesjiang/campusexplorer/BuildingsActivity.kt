@@ -94,6 +94,7 @@ class BuildingsActivity(): AppCompatActivity() {
         editText_search.setOnKeyListener(View.OnKeyListener {v, keyCode, event ->
             if(keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
                 //Hide keyboard
+                editText_search.clearFocus()
                 val imm = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(view.windowToken, 0)
 

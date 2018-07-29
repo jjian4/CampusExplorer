@@ -99,9 +99,21 @@ class BuildingInfoActivity : AppCompatActivity() {
         //Brings user to google maps with direction query
         button_info_directions.setOnClickListener {
 
+            var uriString = ""
+
             //Using url guide from https://developers.google.com/maps/documentation/urls/guide
-            val uriString = getText(R.string.info_map_uri_beginning).toString() +
-                    convertToQuery(building.name) + getText(R.string.info_map_uri_end).toString()
+            //if no address is given, use name of building as search query
+            if(building.address == "") {
+                uriString = getText(R.string.info_map_uri_beginning).toString() +
+                        convertToQuery(building.name) + getText(R.string.info_map_uri_end).toString()
+            }
+            else {
+                uriString = getText(R.string.info_map_uri_beginning).toString() +
+                        convertToQuery(building.address) + getText(R.string.info_map_uri_end).toString()
+            }
+
+            Log.d("James", uriString)
+
             val uri = Uri.parse(uriString)
 
             val directionsIntent = Intent(Intent.ACTION_VIEW, uri)
@@ -122,6 +134,13 @@ class BuildingInfoActivity : AppCompatActivity() {
     fun convertToQuery(name: String): String {
         var newName = name.replace(" ", "+")
         newName = newName.replace(",", "%2C")
+
+        //Remove anything in parenthesis
+        if(newName.contains("(") && newName.contains(")")) {
+            newName = newName.removeRange(newName.indexOf("(") - 1, newName.indexOf(")") + 1)
+        }
+
+        Log.d("James", newName)
 
         return newName
     }

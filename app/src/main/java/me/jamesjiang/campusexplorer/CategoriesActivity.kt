@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_categories.*
+import me.jamesjiang.campusexplorer.BuildingSets.*
 
 //User chooses which category of buildings they would like to view
 class CategoriesActivity : AppCompatActivity() {
