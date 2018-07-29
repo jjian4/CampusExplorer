@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_buildings.*
 
 //Displays list of buildings, with filter and search options
-//Default constructor must be defined for activity to be included in manifest (will not be used)
 class BuildingsActivity(): AppCompatActivity() {
 
     //Initialize buttonID, which is passed from BuildingsAdapter to BuildingInfoActivity
