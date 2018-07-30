@@ -160,23 +160,6 @@ val academicBuildings = BuildingSet(
 )
 
 
-val housingBuildings = BuildingSet(
-        setOf(
-                Building("Alice Llyod Hall", Category.Housing, Area.Central, 9),
-
-                Building("Betsy Barbour House", Category.Housing, Area.Central, 20)
-
-        )
-)
-
-val librariesMuseumsBuildings = BuildingSet(
-        setOf(
-                Building("Bentley Historical Library", Category.Library, Area.North, 19),
-
-                Building("Duderstadt Center", Category.Library, Area.North, 181)
-
-        )
-)
 
 val medicalBuildings = BuildingSet(
         setOf(

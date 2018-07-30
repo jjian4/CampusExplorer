@@ -67,21 +67,27 @@ class BuildingsActivity(): AppCompatActivity() {
         //Toggle search vs. radio buttons
         imageButton_toggle_search.setOnClickListener {
             if (editText_search.visibility == View.VISIBLE) {
-                imageButton_toggle_search.setImageResource(R.drawable.ic_search_action_blue)
+                imageButton_toggle_search.setImageResource(R.drawable.ic_search_action_maize)
                 //Hide keyboard
                 val imm = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(view.windowToken, 0)
 
                 editText_search.visibility = View.GONE
+                imageButton_search_delete.visibility = View.GONE
+                imageButton_backto_radio.visibility = View.GONE
                 radioGroup.visibility = View.VISIBLE
+                button_backto_categories.visibility = View.VISIBLE
                 //Show original list
                 recylcerview_buildings.adapter = BuildingsAdapter(this, buildingsList)
                 radioButton_all.isChecked = true
             }
             else {
-                imageButton_toggle_search.setImageResource(R.drawable.ic_search_action_maize)
+                imageButton_toggle_search.setImageResource(R.drawable.ic_search_action_blue)
                 radioGroup.visibility = View.GONE
+                button_backto_categories.visibility = View.GONE
                 editText_search.visibility = View.VISIBLE
+                imageButton_search_delete.visibility = View.VISIBLE
+                imageButton_backto_radio.visibility = View.VISIBLE
                 //Show keyboard
                 editText_search.requestFocus()
                 val imm = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -100,13 +106,27 @@ class BuildingsActivity(): AppCompatActivity() {
 
                 //Filter recyclerview
                 var filteredList = buildingsList.filter {
-                    building -> building.name.toLowerCase().contains(editText_search.text) ||
+                    building -> building.name.contains(editText_search.text) ||
+                        building.name.toLowerCase().contains(editText_search.text) ||
                         building.name.toUpperCase().contains(editText_search.text) }
                 recylcerview_buildings.adapter = BuildingsAdapter(this, filteredList)
                 return@OnKeyListener true
             }
             false
         })
+
+        //Delete text in search bar
+        imageButton_search_delete.setOnClickListener {
+            editText_search.text.clear()
+            //Show keyboard
+            val imm = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showSoftInput(editText_search, InputMethodManager.SHOW_IMPLICIT)
+        }
+
+        //Same effect as clicking toggle_search, go back to radio group view
+        imageButton_backto_radio.setOnClickListener {
+            imageButton_toggle_search.callOnClick()
+        }
 
     }
 

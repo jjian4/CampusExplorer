@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView_category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView_category"
-        app:srcCompat="@drawable/ic_search_action_blue" />
+        app:srcCompat="@drawable/ic_search_action_maize" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recylcerview_buildings"
@@ -65,21 +65,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <ImageButton
+            android:id="@+id/imageButton_backto_radio"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="12dp"
+            android:background="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:tint="@color/colorAccent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/constraint_bottom_bar"
+            app:layout_constraintStart_toStartOf="@id/constraint_bottom_bar"
+            app:layout_constraintTop_toTopOf="@id/constraint_bottom_bar"
+            app:srcCompat="@drawable/ic_search_backto_radio" />
+
         <EditText
             android:id="@+id/editText_search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="12dp"
             android:layout_marginStart="12dp"
+            android:backgroundTint="@color/colorPrimary"
             android:ems="10"
             android:hint="@string/list_search_hint"
-            android:inputType="textPersonName"
+            android:inputType="textCapWords|textPersonName"
             android:textColor="@color/colorPrimary"
+            android:textCursorDrawable="@color/colorPrimary"
+            android:textSize="18sp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/constraint_bottom_bar"
+            app:layout_constraintEnd_toStartOf="@id/imageButton_search_delete"
+            app:layout_constraintStart_toEndOf="@+id/imageButton_backto_radio" />
+
+        <ImageButton
+            android:id="@+id/imageButton_search_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:tint="@color/colorPrimary"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/editText_search"
             app:layout_constraintEnd_toEndOf="@id/constraint_bottom_bar"
-            app:layout_constraintStart_toEndOf="@+id/button_backto_categories" />
+            app:layout_constraintTop_toTopOf="@id/constraint_bottom_bar"
+            app:srcCompat="@drawable/ic_search_delete" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -136,6 +167,7 @@
             app:layout_constraintBottom_toBottomOf="@id/constraint_bottom_bar"
             app:layout_constraintStart_toStartOf="@id/constraint_bottom_bar"
             app:srcCompat="@drawable/ic_back_button" />
+
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
