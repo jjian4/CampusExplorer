@@ -90,6 +90,8 @@ val academicBuildings = BuildingSet(
 
                 Building("Lay Automotive Engineering Laboratory (AL)", Category.Academic, Area.North, 86),
 
+                Building("Lurie Biomedical Engineering Building (LBME)", Category.Academic, Area.North, 7),
+
                 Building("Lorch Hall", Category.Academic, Area.Central, 88),
 
                 Building("Mason Hall (MH)", Category.Academic, Area.Central, 540),
@@ -102,7 +104,7 @@ val academicBuildings = BuildingSet(
 
                 Building("Modern Languages Building (MLB)", Category.Academic, Area.Central, 111),
 
-                Building("Moore Building (SM)", Category.Academic, Area.North, 52),
+                Building("Moore Building (SM - School of Music)", Category.Academic, Area.North, 52),
 
                 Building("Naval Architecture And Marine Engineering (NAME)", Category.Academic, Area.North, 113),
 
@@ -111,11 +113,11 @@ val academicBuildings = BuildingSet(
 
                 Building("Nuclear Engineering Laboratories", Category.Academic, Area.North, 585),
 
-                Building("Kinesiology Building", Category.Academic, Area.Central, 135),
+                Building("Kinesiology Building (OBL - Observatory Lodge)", Category.Academic, Area.Central, 135),
 
                 Building("College Of Pharmacy", Category.Academic, Area.Central, 130),
 
-                Building("Public Health I (Vaughan)", Category.Academic, Area.Central, 70),
+                Building("Public Health I (SPH1)", Category.Academic, Area.Central, 70),
 
                 Building("Public Health II (SPH2)", Category.Academic, Area.Central, 178),
 
@@ -134,6 +136,8 @@ val academicBuildings = BuildingSet(
                 Building("School Of Social Work (SSWB)", Category.Academic, Area.Central, 138),
 
                 Building("Space Research Building (SRB)", Category.Academic, Area.North, 142),
+
+                Building("Stamps Auditorium", Category.Academic, Area.North, 526),
 
                 Building("Tappan Hall (TAP)", Category.Academic, Area.Central, 148),
 

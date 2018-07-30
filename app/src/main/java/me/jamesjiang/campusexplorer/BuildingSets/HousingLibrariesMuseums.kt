@@ -80,7 +80,7 @@ val librariesMuseumsBuildings = BuildingSet(
                 Building("Kelsey Museum of Archaeology", Category.Museum, Area.Central,
                         "https://lsa.umich.edu/kelsey"),
 
-                Building("Kresge (K-BUS)", Category.Library, Area.Central, 523),
+                Building("Kresge Library (K-BUS)", Category.Library, Area.Central, 523),
 
                 Building("Law Library", Category.Library, Area.Central, 166,
                         "801 MONROE ST"),
@@ -89,6 +89,8 @@ val librariesMuseumsBuildings = BuildingSet(
 
                 Building("Research Museums Center (RMC)", Category.Museum, Area.Other, 533,
                         "3600 VARSITY DR"),
+
+                Building("Ruthven Museums Building", Category.Museum, Area.Central, 8),
 
                 Building("Shapiro Library (UGLI)", Category.Library, Area.Central, 139),
 
