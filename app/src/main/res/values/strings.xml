@@ -4,9 +4,9 @@
     <!--About-->
     <string name="about_intro_textview_1">Welcome to</string>
     <string name="about_intro_textview_2">Campus Explorer!</string>
-    <string name="about_sub_textview">A convenience app designed for any student or visitor at
-        University of Michigan - Ann Arbor who is interested in navigating our large and beautiful
-        campus a little more efficiently.</string>
+    <string name="about_sub_textview">A convenience application designed for any student or visitor
+        at University of Michigan - Ann Arbor who is interested in navigating and learning about our
+        beautiful campus more efficiently.</string>
 
     <string name="tutorial_button">Tutorial</string>
     <string name="about_goto_categories_button">Explore the Campus</string>
@@ -14,16 +14,13 @@
     <string name="about_footer_disclaimer">Disclaimer: This is a personal project. I do not work for
         University of Michigan.</string>
     <string name="about_footer_email">To report any errors/misinformation or ask any questions,
-        please email me at jjian@umich.edu.</string>
+        feel free to email me at jjian@umich.edu.</string>
 
 
     <!--Tutorial-->
     <string name="tutorial_textview_1">Campus Explorer accelerates the process of finding the
-        information you need with its custom search options.
+        information you need with its custom search features.
     </string>
-
-
-
 
 
     <!--Categories-->

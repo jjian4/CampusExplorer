@@ -23,7 +23,7 @@
             android:name=".BuildingInfoActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".BuildingsActivity" />
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>
