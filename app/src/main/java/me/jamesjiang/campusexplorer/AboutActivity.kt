@@ -23,8 +23,8 @@ class AboutActivity : AppCompatActivity() {
             //No longer first-time user
             firstRunSharedPreferences.setFirstRunCheck(false)
 
-            //TODO:TUTORIAL
-            
+            val tutorialIntent = Intent(this, TutorialActivity::class.java)
+            startActivity(tutorialIntent)
         }
 
         //Explore the Campus button

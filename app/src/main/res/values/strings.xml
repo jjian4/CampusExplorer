@@ -17,10 +17,14 @@
         feel free to email me at jjian@umich.edu.</string>
 
 
-    <!--Tutorial-->
-    <string name="tutorial_textview_1">Campus Explorer accelerates the process of finding the
+    <!--Tutorial slides-->
+    <string name="tutorial_title">Campus Explorer</string>
+    <string name="tutorial_textview_0">Campus Explorer accelerates the process of finding the
         information you need with its custom search features.
     </string>
+    <string name="tutorial_textview_1">Testing testing
+    </string>
+    <string name="tutorial_textview_2">Testinngggggg</string>
 
 
     <!--Categories-->
