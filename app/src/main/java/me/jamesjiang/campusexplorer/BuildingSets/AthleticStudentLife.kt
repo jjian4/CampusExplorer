@@ -66,7 +66,8 @@ val studentLifeBuildings = BuildingSet(
 
                 Building("Elbel Field", Category.Student_Life, Area.Central, 557),
 
-                Building("Gates Lecture Hall, UM Biological Station", Category.Student_Life, Area.Other, 601),
+                Building("Gates Lecture Hall, UM Biological Station", Category.Student_Life, Area.Other, 601,
+                        "9133 Biological Rd"),
 
                 Building("Ginsberg Center for Community Service and Learning", Category.Student_Life, Area.Central, 92),
 

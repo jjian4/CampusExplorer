@@ -1,6 +1,31 @@
 <resources>
     <string name="app_name">Campus Explorer</string>
 
+    <!--About-->
+    <string name="about_intro_textview_1">Welcome to</string>
+    <string name="about_intro_textview_2">Campus Explorer!</string>
+    <string name="about_sub_textview">A convenience app designed for any student or visitor at
+        University of Michigan - Ann Arbor who is interested in navigating our large and beautiful
+        campus a little more efficiently.</string>
+
+    <string name="tutorial_button">Tutorial</string>
+    <string name="about_goto_categories_button">Explore the Campus</string>
+
+    <string name="about_footer_disclaimer">Disclaimer: This is a personal project. I do not work for
+        University of Michigan.</string>
+    <string name="about_footer_email">To report any errors/misinformation or ask any questions,
+        please email me at jjian@umich.edu.</string>
+
+
+    <!--Tutorial-->
+    <string name="tutorial_textview_1">Campus Explorer accelerates the process of finding the
+        information you need with its custom search options.
+    </string>
+
+
+
+
+
     <!--Categories-->
     <string name="academic_button">Academic</string>
     <string name="administrative_button">Administrative</string>
@@ -10,12 +35,14 @@
     <string name="favorites_button">Favorites</string>
     <string name="all_button">All Buildings</string>
 
+    <!--Buildings list-->
     <string name="list_search_hint">Search</string>
     <string name="list_radio_all">All</string>
     <string name="list_radio_central">Central</string>
     <string name="list_radio_north">North</string>
     <string name="list_radio_other">Other</string>
 
+    <!--Building Info-->
     <string name="info_category_textview">Category</string>
     <string name="info_area_textview">Area</string>
     <string name="info_website_button">Website</string>

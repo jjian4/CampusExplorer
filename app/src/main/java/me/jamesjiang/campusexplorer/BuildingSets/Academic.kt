@@ -16,7 +16,7 @@ val academicBuildings = BuildingSet(
 
                 Building("305 W. Liberty", Category.Academic, Area.Central, 586),
 
-                Building("Academic Center (ROSS AC)", Category.Academic, Area.Central, 528),
+                Building("Academic Center (Ross AC)", Category.Academic, Area.Central, 528),
 
                 Building("Angell Hall (AH)", Category.Academic, Area.Central, 12),
 

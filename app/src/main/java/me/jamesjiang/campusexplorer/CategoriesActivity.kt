@@ -1,9 +1,11 @@
 package me.jamesjiang.campusexplorer
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import kotlinx.android.synthetic.main.activity_buildings.*
 import kotlinx.android.synthetic.main.activity_categories.*
 import me.jamesjiang.campusexplorer.BuildingSets.*
 
@@ -13,6 +15,24 @@ class CategoriesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories)
+/*
+        //If app is opened for the first time (tracked using shared pref), send to AboutActivity
+        val firstRunSharedPreferences = FirstRunSharedPreferences(this)
+        if(firstRunSharedPreferences.getFirstRunCheck() == true) {
+            firstRunSharedPreferences.setFirstRunCheck(false)
+            val aboutIntent = Intent(this, AboutActivity::class.java)
+            startActivity(aboutIntent)
+        }*/
+
+
+        imageButton_goto_buildings_search.setOnClickListener {
+            button_all.callOnClick()
+        }
+
+        imageButton_goto_about.setOnClickListener {
+            val aboutIntent = Intent(this, AboutActivity::class.java)
+            startActivity(aboutIntent)
+        }
 
         button_academic.setOnClickListener {
             sendToBuildingsActivity(button_academic, academicBuildings)
