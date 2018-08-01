@@ -11,8 +11,8 @@
     <string name="tutorial_button">Tutorial</string>
     <string name="about_goto_categories_button">Explore the Campus</string>
 
-    <string name="about_footer_disclaimer">This is a personal project and was not developed on
-        University of Michigan's behalf.</string>
+    <string name="about_footer_disclaimer">This is a personal project and was not developed on the
+        behalf of University of Michigan.</string>
     <string name="about_footer_email">To report any errors/misinformation or ask any questions,
         feel free to email me at jjian@umich.edu.</string>
 
@@ -28,12 +28,14 @@
         allow you to filter the displayed buildings by their locations.</string>
     <string name="tutorial_textview_buildings_search">Alternatively, you can utilize the custom
         search-view if you have a specific building name in mind.</string>
-    <string name="tutorial_textview_building_info">Selecting a building name exhibits helpful
+    <string name="tutorial_textview_building_info">Selecting a building name displays helpful
         information about the building, including an interactive web-view of its website.</string>
     <string name="tutorial_textview_favoriting">Tap on the star next to the building name to save the
         building to your Favorites list, which you can easily access in the home menu.</string>
     <string name="tutorial_textview_directions">Tap on the Directions button to launch Google Maps
         with a uniquely encoded url. No need to type in your starting point or destination! </string>
+    <string name="tutorial_textview_outro">I hope you enjoy using with the app as much as I enjoyed
+        making it :) Once again, please contact me at jjian@umich.edu with any questions! - James Jiang</string>
 
 
     <!--Categories-->

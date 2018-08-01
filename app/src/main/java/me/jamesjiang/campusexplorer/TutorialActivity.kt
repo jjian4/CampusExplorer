@@ -9,13 +9,14 @@ import kotlinx.android.synthetic.main.activity_tutorial.*
 class TutorialActivity : AppCompatActivity() {
 
     var imgPath: IntArray = intArrayOf(
-            R.drawable.ic_search_action_maize,
+            R.drawable.tutorial_intro,
             R.drawable.categories_sample,
             R.drawable.buildings_campus_sample,
             R.drawable.buildings_search_keyboard_sample,
             R.drawable.building_info_sample,
             R.drawable.favorites_demo,
-            R.drawable.directions_sample
+            R.drawable.directions_sample,
+            R.drawable.white_background
     )
 
 
@@ -26,7 +27,8 @@ class TutorialActivity : AppCompatActivity() {
             R.string.tutorial_textview_buildings_search,
             R.string.tutorial_textview_building_info,
             R.string.tutorial_textview_favoriting,
-            R.string.tutorial_textview_directions
+            R.string.tutorial_textview_directions,
+            R.string.tutorial_textview_outro
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
