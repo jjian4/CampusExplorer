@@ -30,6 +30,7 @@ class TutorialPagerAdapter(var con: Context, var textPath: IntArray, var imgPath
         val img = rv.findViewById<ImageView>(R.id.imageView_tutorial)
 
         //Set the description
+        Log.d("James", rv.resources.getString(textPath[position]))
         description.text = rv.resources.getString(textPath[position])
 
 

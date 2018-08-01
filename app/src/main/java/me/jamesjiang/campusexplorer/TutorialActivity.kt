@@ -9,17 +9,25 @@ import kotlinx.android.synthetic.main.activity_tutorial.*
 class TutorialActivity : AppCompatActivity() {
 
     var imgPath: IntArray = intArrayOf(
-            R.drawable.ic_back_button,
-            R.drawable.ic_empty_star,
-            R.drawable.ic_filled_star,
-            R.drawable.ic_info)
+            R.drawable.ic_search_action_maize,
+            R.drawable.categories_sample,
+            R.drawable.buildings_campus_sample,
+            R.drawable.buildings_search_keyboard_sample,
+            R.drawable.building_info_sample,
+            R.drawable.favorites_demo,
+            R.drawable.directions_sample
+    )
 
 
     var textPath: IntArray = intArrayOf(
-            R.string.tutorial_textview_0,
-            R.string.tutorial_textview_2,
-            R.string.tutorial_textview_1,
-            R.string.tutorial_textview_2)
+            R.string.tutorial_textview_intro,
+            R.string.tutorial_textview_categories,
+            R.string.tutorial_textview_buildings_campus,
+            R.string.tutorial_textview_buildings_search,
+            R.string.tutorial_textview_building_info,
+            R.string.tutorial_textview_favoriting,
+            R.string.tutorial_textview_directions
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

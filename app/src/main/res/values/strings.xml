@@ -11,20 +11,29 @@
     <string name="tutorial_button">Tutorial</string>
     <string name="about_goto_categories_button">Explore the Campus</string>
 
-    <string name="about_footer_disclaimer">Disclaimer: This is a personal project. I do not work for
-        University of Michigan.</string>
+    <string name="about_footer_disclaimer">This is a personal project and was not developed on
+        University of Michigan's behalf.</string>
     <string name="about_footer_email">To report any errors/misinformation or ask any questions,
         feel free to email me at jjian@umich.edu.</string>
 
 
     <!--Tutorial slides-->
-    <string name="tutorial_title">Campus Explorer</string>
-    <string name="tutorial_textview_0">Campus Explorer accelerates the process of finding the
+    <string name="tutorial_title">Tutorial</string>
+    <string name="tutorial_textview_intro">Campus Explorer accelerates the process of finding the
         information you need with its custom search features.
     </string>
-    <string name="tutorial_textview_1">Testing testing
-    </string>
-    <string name="tutorial_textview_2">Testinngggggg</string>
+    <string name="tutorial_textview_categories">The home menu offers a list of seven building
+        categories to choose from, including the option to see all buildings on campus!</string>
+    <string name="tutorial_textview_buildings_campus">The radio buttons at the bottom of each list
+        allow you to filter the displayed buildings by their locations.</string>
+    <string name="tutorial_textview_buildings_search">Alternatively, you can utilize the custom
+        search-view if you have a specific building name in mind.</string>
+    <string name="tutorial_textview_building_info">Selecting a building name exhibits helpful
+        information about the building, including an interactive web-view of its website.</string>
+    <string name="tutorial_textview_favoriting">Tap on the star next to the building name to save the
+        building to your Favorites list, which you can easily access in the home menu.</string>
+    <string name="tutorial_textview_directions">Tap on the Directions button to launch Google Maps
+        with a uniquely encoded url. No need to type in your starting point or destination! </string>
 
 
     <!--Categories-->
