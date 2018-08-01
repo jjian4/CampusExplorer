@@ -32,6 +32,11 @@ class CategoriesActivity : AppCompatActivity() {
             startActivity(aboutIntent)
         }
 
+        imageButton_goto_restore.setOnClickListener {
+            val restoreIntent = Intent(this, RestoreActivity::class.java)
+            startActivity(restoreIntent)
+        }
+
 
         //Category buttons
         button_academic.setOnClickListener {

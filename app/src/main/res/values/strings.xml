@@ -37,6 +37,13 @@
     <string name="tutorial_textview_outro">I hope you enjoy using with the app as much as I enjoyed
         making it :) Once again, please contact me at jjian@umich.edu with any questions! - James Jiang</string>
 
+    <!--Restore-->
+    <string name="restore_title">Restoring the App</string>
+    <string name="restore_description">Restoring Campus Explorer will remove all buildings from your
+        Favorites list and bring you back to the app tutorial as a first-time user. Please confirm.
+    </string>
+    <string name="restore_button">Restore</string>
+    <string name="restore_back_button">Back to Home</string>
 
     <!--Categories-->
     <string name="academic_button">Academic</string>

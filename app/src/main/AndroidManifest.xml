@@ -24,7 +24,8 @@
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".BuildingsActivity" />
         <activity android:name=".AboutActivity" />
-        <activity android:name=".TutorialActivity"></activity>
+        <activity android:name=".TutorialActivity" />
+        <activity android:name=".RestoreActivity"></activity>
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import android.webkit.WebViewClient
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_building_info.*
 
+//Displays info about the building including category, area, and webview of building's website
 class BuildingInfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

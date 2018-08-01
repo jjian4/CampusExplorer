@@ -6,6 +6,7 @@ import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import kotlinx.android.synthetic.main.activity_tutorial.*
 
+//Tutorial mainly for first-time users, contains slideshow with screenshots and descriptions
 class TutorialActivity : AppCompatActivity() {
 
     var imgPath: IntArray = intArrayOf(
