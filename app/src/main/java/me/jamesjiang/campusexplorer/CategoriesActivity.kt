@@ -23,8 +23,23 @@ class CategoriesActivity : AppCompatActivity() {
 
 
         //Secondary buttons
+        //Same as All buildings but starts on search view
         imageButton_goto_buildings_search.setOnClickListener {
-            button_all.callOnClick()
+            val combinedSet = combineSets(listOf(
+                    academicBuildings,
+                    administrativeBuildings,
+                    housingBuildings,
+                    librariesMuseumsBuildings,
+                    medicalBuildings,
+                    athleticBuildings,
+                    studentLifeBuildings
+            ))
+            val buildingsIntent = Intent(this, BuildingsActivity::class.java)
+            buildingsIntent.putExtra("Button ID", button_all.id)
+            buildingsIntent.putExtra("Category", button_all.text)
+            buildingsIntent.putExtra("Building set", combinedSet)
+            buildingsIntent.putExtra("Start on search", true)
+            startActivity(buildingsIntent)
         }
 
         imageButton_goto_about.setOnClickListener {

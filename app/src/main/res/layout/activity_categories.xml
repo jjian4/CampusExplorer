@@ -20,6 +20,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_info" />
 
+    <ImageButton
+        android:id="@+id/imageButton_goto_restore"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="14dp"
+        android:background="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_restore" />
+
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraint_categories"
         android:layout_width="match_parent"
@@ -52,7 +64,7 @@
             android:layout_height="55dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="7dp"
             android:backgroundTint="@android:color/holo_blue_light"
             android:text="@string/sports_student_life_button"
             android:textSize="24sp"
@@ -66,7 +78,7 @@
             android:layout_height="85dp"
             android:layout_marginEnd="24dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="7dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/all_button"
             android:textColor="@color/colorAccent"
@@ -81,7 +93,7 @@
             android:layout_height="55dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="7dp"
             android:backgroundTint="@android:color/holo_red_light"
             android:text="@string/medical_button"
             android:textSize="24sp"
@@ -95,7 +107,7 @@
             android:layout_height="55dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="7dp"
             android:backgroundTint="@android:color/holo_orange_dark"
             android:text="@string/favorites_button"
             android:textSize="24sp"
@@ -109,7 +121,7 @@
             android:layout_height="55dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="7dp"
             android:backgroundTint="@android:color/holo_purple"
             android:text="@string/housing_libraries_button"
             android:textSize="24sp"
@@ -123,7 +135,7 @@
             android:layout_height="55dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="7dp"
             android:backgroundTint="@android:color/holo_green_light"
             android:text="@string/administrative_button"
             android:textSize="24sp"
@@ -137,7 +149,7 @@
             android:layout_height="55dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="9dp"
             android:backgroundTint="@color/colorAccent"
             android:text="@string/academic_button"
             android:textSize="24sp"
@@ -161,18 +173,6 @@
             app:srcCompat="@drawable/ic_search_action_maize" />
 
     </android.support.constraint.ConstraintLayout>
-
-    <ImageButton
-        android:id="@+id/imageButton_goto_restore"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="14dp"
-        android:layout_marginStart="14dp"
-        android:background="@android:color/white"
-        android:backgroundTint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_restore" />
 
 
 </android.support.constraint.ConstraintLayout>

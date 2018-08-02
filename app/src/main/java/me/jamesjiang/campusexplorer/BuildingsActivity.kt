@@ -37,7 +37,6 @@ class BuildingsActivity(): AppCompatActivity() {
             startActivity(backtoCategoriesIntent)
         }
 
-
         //Get passed-in serializable set of buildings from CategoriesActivity
         val buildingSet = intent.getSerializableExtra("Building set") as BuildingSet
 
@@ -95,6 +94,10 @@ class BuildingsActivity(): AppCompatActivity() {
             }
         }
 
+        //If imageButton_goto_buildings_search was clicked in Categories, start activity with search view
+        if (intent.hasExtra("Start on search")) {
+            imageButton_toggle_search.callOnClick()
+        }
 
         //Search and filter the recyclerview when Enter is clicked
         editText_search.setOnKeyListener(View.OnKeyListener {v, keyCode, event ->
